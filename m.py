@@ -8,7 +8,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7222533277:AAGn4oxpw1pdWP_ObppovSwtl3o2Jyy8aLw')
+bot = telebot.TeleBot('7403534234:AAF4LeFDR0Apo8jCkOIck5Du4UV3hEVrXpI')
 
 # Admin user IDs
 admin_id = ["1193658274"]
@@ -56,7 +56,7 @@ def log_command(user_id, target, port, time):
         username = f"UserID: {user_id}"
     
     with open(LOG_FILE, "a") as file:  # Open in "append" mode
-        file.write(f"Username: {username}\nTarget: {target}\nPort: {port}\nTime: {time}\n\n")
+        file.write(f"Username: {username}\n🎯Target: {target}\n🏖️Port: {port}\n⏰Time: {time}\n\n")
 
 # Function to clear logs
 def clear_logs():
@@ -75,11 +75,11 @@ def clear_logs():
 def record_command_logs(user_id, command, target=None, port=None, time=None):
     log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {command}"
     if target:
-        log_entry += f" | Target: {target}"
+        log_entry += f" |🎯 Target: {target}"
     if port:
-        log_entry += f" | Port: {port}"
+        log_entry += f" |🏖️ Port: {port}"
     if time:
-        log_entry += f" | Time: {time}"
+        log_entry += f" |⏰ Time: {time}"
     
     with open(LOG_FILE, "a") as file:
         file.write(log_entry + "\n")
@@ -279,7 +279,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, 🚀𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: VIP- User of 8114374152"
+    response = f"{username}, 🚀𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🏖️𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: VIP- User of 8114374152"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -401,8 +401,8 @@ Vip 🌟 :
 
 Pr-ice List💸 :
 Day-->80 Rs
-Week-->400 Rs
-Month-->1000 Rs
+Week-->300 Rs
+Month-->800 Rs
 '''
     bot.reply_to(message, response)
 
